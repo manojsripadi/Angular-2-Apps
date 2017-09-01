@@ -1,0 +1,12 @@
+[
+[
+              {"id":1,"name":"manoj","age":25,"dept":"javascript"},
+               {"id":2,"name":"sravs","age":24,"dept":"MBA"},
+               {"id":3,"name":"kavya","age":26,"dept":"Testing"}
+],
+  [          
+    {"dpt":"ECE","id":1},
+    {"dpt":"CSE","id":2},
+    {"dpt":"IT","id":3}
+] 
+  ]

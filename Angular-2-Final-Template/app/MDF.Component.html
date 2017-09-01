@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>User Data</h2>
+    <form [formGroup]="userData" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" #nameRef  class="form-control" formControlName="name" >
+        <div *ngIf="userData.controls['name'].hasError('required')" class="alert alert-danger">
+            <p>Please Enter Name</p>
+            </div>
+         <div *ngIf="userData.controls['name'].hasError('minlength')" class="alert alert-danger">
+            <p>Please Enter atleast 4 characters</p>
+            </div>
+         <div *ngIf="userData.controls['name'].hasError('maxlength')" class="alert alert-danger">
+            <p>Dont enter more than 10 characters</p>
+            </div>
+    </div>    
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="mail">
+        </div>    
+    <div formGroupName="address">
+<div class="form-group">
+        <label>City</label>
+        <input type="text" #refClass class="form-control" formControlName="city">
+        </div>    
+    <div class="form-group">
+        <label>Street</label>
+        <input type="text" class="form-control" formControlName="street">
+        </div>  
+    <div class="form-group">
+        <label>PostalCode</label>
+        <input type="text" class="form-control" formControlName="PinCode">
+        <div *ngIf="userData.controls['address'].controls['PinCode'].hasError('pattern')" class="alert alert-danger">
+            Please enter 4 digit Number
+            </div>
+        </div> 
+    
+        </div>
+    <button type="button" [disabled]="userData.invalid" class="btn btn-primary">Submit</button>     
+    </form>
+    </div>

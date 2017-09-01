@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Metristream App</h2>
+    <form class="form-group" #userData (ngSubmit)="submit($event)">
+        <div >
+        <div >
+            <label>Audit Type</label>
+      <input type="text"  class="form-control" name="Atype" #type [(ngModel)]="reftype"> <br/>
+     
+    </div>
+    <div> 
+    <label>Factory ID</label>
+    <input type="text"  class="form-control" name="FID" #fid [(ngModel)]="refID"><br/>
+    </div>
+    <div>
+    <label>Factory Name</label>
+    <input type="text"  class="form-control" name="Fname" #email [(ngModel)]="refname"><br/>
+    </div>
+    <div class="form-group">
+    <label>Audit ID</label>
+    <input type="text" #refNumber1  class="form-control" name="AuditId" [(ngModel)]="refauditid"><br/>
+</div>
+<div>
+    <input type="button" value="Add"  class="btn btn-primary">
+</div><br>
+<button type="button" (click)="edit(userData.value); $event.preventDefault()" class="btn btn-primary">Edit</button>
+ </div> <br/>
+
+
+</form>
+    </div>

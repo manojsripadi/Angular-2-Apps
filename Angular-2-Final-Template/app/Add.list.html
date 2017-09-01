@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Contact App</h2>
+    <form class="form-group" (ngSubmit)="submit($event)">
+        <div>
+        <div>
+            <label>Firstname:</label>
+      <input type="text"  class="form-control" name="Fname" #fname [(ngModel)]="refname"> <br/>
+     
+    </div>
+    <div> 
+    <label>Lastname:</label>
+    <input type="text"  class="form-control" name="Lname" #lname [(ngModel)]="reflastname"><br/>
+    </div>
+    <div>
+    <label>Mail:</label>
+    <input type="text"  class="form-control" name="Email" #email [(ngModel)]="refmail"><br/>
+    </div>
+    <div class="form-group">
+    <label>Number:</label>
+    <input type="text" #refNumber1  class="form-control" name="Numb" [(ngModel)]="refnumber"><br/>
+</div>
+<div>
+    <input type="button" value="Add" (click)="addData(fname.value,lname.value,email.value,refNumber1.value); $event.preventDefault()" class="btn btn-primary">
+</div><br>
+<button (click)="edit(); $event.preventDefault()" class="btn btn-primary">Edit</button>
+ </div> <br/>
+
+
+</form>
+    </div>
